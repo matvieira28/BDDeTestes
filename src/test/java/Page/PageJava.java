@@ -10,10 +10,7 @@ public class PageJava {
 	
 	public void pausa(int tempo) throws InterruptedException {
 		
-		
 	Thread.sleep(tempo);	
-		
-		
 		
 	}
 	
@@ -24,15 +21,24 @@ public class PageJava {
 	}
 	public void clicar (By elemento ) {
 	 driver.findElement(elemento).click();	
+			
+	}
+	
+	public void abrirNavegador(String site) {
+		
+		System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get(site);
+	    driver.manage().window().maximize();	
+	   
+	
+	}
+	public void validacao (String valido , By elemento) {
 		
 		
 	}
 	
-	public void abrirNavegador(String Url) {
-		
-		System.out.println("webdriver.chrome.driver" );
-		driver =  new ChromeDriver();
-		driver.get(Url);
-	    driver.manage().window().maximize();	}
+	
+	
 	
 }

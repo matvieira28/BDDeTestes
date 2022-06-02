@@ -24,7 +24,7 @@ public class meusTestes2 {
 	    int  Senha = rs.nextInt();
 		
 		
-		if  (Senha <= 800) {
+		if  (Senha >= 800) {
 			
 			System.out.println("Pagamento Aprovado");
 					
